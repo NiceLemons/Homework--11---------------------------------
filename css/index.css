@@ -185,3 +185,19 @@ a {
 	padding-left: 391px;
 	letter-spacing: -1px;
 }
+.button_banner {
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	height: 60px;
+	width: 160px;
+	background-color: slateblue;
+	text-align: center;
+	padding-top: 20px;
+	
+}
+.button_banner a {
+		color: #EEEFF1;
+		text-decoration: none;
+		text-align: center;
+}
