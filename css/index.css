@@ -60,15 +60,22 @@ header {
 	margin-bottom: 72px;
 	text-align: justify;
 }
+.lorem_one:hover {
+	transform: scale(1.1);
+}
 .header_button {
 	width: 225px;
 	height: 65px;
 	background: #34547A;
 	padding-left: 41px;
 	margin-left: 2px;
-	padding-top: 14px;
+	padding-top: 18px;
+}
+.header_button:hover {
+	transform: scale(1.1);
 }
 .write_me {
+	padding-top: 10px;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
@@ -158,6 +165,14 @@ a {
 	padding-left: 16px;
 	padding-bottom: 100px;
 }
+.youtube:hover {
+	filter: opacity(1);
+	filter: grayscale(0);
+}
+.youtube {
+	filter: opacity(0.8);
+	filter: grayscale(0.9);
+}
 .div_end {
 	background: #34547A;
 	height: 151px;
@@ -194,10 +209,55 @@ a {
 	background-color: slateblue;
 	text-align: center;
 	padding-top: 20px;
-	
+}
+.div_1 {
+	transform: scaleY(0);
+	position: absolute;
+	font-size: 20px;
+}
+.button_banner:hover a+div.div_1 {
+	transform: scaleY(1);
 }
 .button_banner a {
 		color: #EEEFF1;
 		text-decoration: none;
 		text-align: center;
+}
+@-webkit-keyframes linkHover {
+	0% {
+		bottom: 0px;
+	}
+	25% {
+		top: 25px;
+	}
+	50% {
+		bottom: 0px;
+	}
+	75% {
+		bottom: -25px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+@keyframes linkHover {
+	0% {
+		bottom: 0px;
+	}
+	25% {
+		bottom: 25px;
+	}
+	50% {
+		bottom: 0px;
+	}
+	75% {
+		bottom: -25px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+img {
+	animation: 3s linear linkHover infinite;
+	position: relative;
 }
