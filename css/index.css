@@ -133,7 +133,6 @@ a {
 	width: 141px;
 	height: 50px;
 	margin: 21px;
-	overflow: hidden;
 }
 .h2_two {
 	margin: 0;
@@ -250,4 +249,41 @@ iframe:hover {
 img {
 	animation: linkHover 10s infinite, alternate cubic-bezier(0.46, 0.2, 0.44, 0.71);
 	position: relative;
+}
+.modal {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	transition: all ease-in-out 0.3s;
+}
+.moday-body {
+	transform: translateY(-100vh) translateX(40vw);
+	display: inline-block;
+	padding: 20px;
+	background: #fff;
+	border-radius: 10px;
+	transition: all ease-in-out 0.5s;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+.modal.show {
+	bottom: 0;
+}
+.modal.show .moday-body {
+	opacity: 1;
+	transform: translateY(45vh) translateX(40vw);
+}
+.submit {
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: lightseagreen;
+	color: #fff;
+}
+textarea {
+	resize: none;
 }

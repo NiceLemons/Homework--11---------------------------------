@@ -12,11 +12,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<title>Document</title>
+		<title>Homework 12</title>
+		<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<div class="button_banner">
-			<a href="#" class="button_click">click me</a>
+		<div id="modal" class="modal">
+		<div class="moday-body">
+			<h2>Give us feedback</h2>
+				<form>
+					<p>Comment<Br>
+   	 			<textarea name="comment" cols="40" rows="3"></textarea></p>
+					<span class="submit" id="submit">Submit</span>
+				</form>
+			</div>
+		</div>
+		<div  class="button_banner">
+			<a href="#" class="button_click"><span >click me</span></a>
 			</div>
 		</div>
 		<header class="gray-bg">
@@ -38,8 +52,8 @@
 						Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
 						Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
 					</p>
-					<p class="header_button">
-						<a href="" class="write_me">НАПИСАТЬ МНЕ</a>
+					<p id="callModal" class="header_button">
+						<span class="write_me callModal">НАПИСАТЬ МНЕ</span>
 					</p>
 				</div>
 			</section>
@@ -70,6 +84,16 @@
 				<p class="p_one">Иванов Иван</p>
 				<p class="p_two">(с) 2018. Все права защищены.</p>
 			</div>
+			<script>
+				$(document).ready(function () {
+					$("#callModal").on('click',function (){
+						$('#modal').toggleClass('show')
+					});
+					$("#submit").on('click',function (){
+						$('#modal').toggleClass('show')
+					});
+				});
+			</script>
 		</main>
 	</body>
 </html>
